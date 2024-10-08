@@ -1,5 +1,5 @@
 const { StatusCodes } = require("http-status-codes");
-const User = require("../middle/userModel");
+const User = require("../middle/usermodel");
 
 let userController = {
   readAll: async (req, res) => {
