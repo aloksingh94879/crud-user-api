@@ -2,6 +2,7 @@ const express= require('express')
 const { StatusCodes } = require('http-status-codes')
 require('dotenv').config()
 
+const cors=require("cors")
 
 //importing db config method
 const  connectDb = require('./db/config')
@@ -13,6 +14,7 @@ const app= express()
 //body parsrr config
 app.use(express.urlencoded({ extended:true }))
 app.use(express.json())
+app.use(cors())
 
 //index route
 app.get(`/`, (req,res) => {
